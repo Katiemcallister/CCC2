@@ -1,8 +1,82 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-}
+html, body{
+margin:0;
+padding:0;
+width: 100%;
+height:100%;
+  }
+  
+  .headercontainer{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  }
+  .logo{
+  padding-left: 3%;
+  width: 100px;
+  padding-right: 100px;
+  }
+  .logoimage{
+  padding-top: 10px;
+  width:150px;
+  }
+  
+  .title{
+  font-size: xx-large;
+  color: #252D4F;
+  text-align: center;
+  padding-right: 5%;
+  }
+  
+  .footerlinks{
+  padding-left: 5%;
+  display:grid;
+  grid-template-columns: repeat(4,1fr);
+  gap:10px;
+  background: linear-gradient(180deg, #252d4f 0%, rgba(37, 45, 79, 0) 100%), linear-gradient(90deg, #004631 0.02%, #61a83f 27.47%, #61a83f 40.06%, #41679f 69.71%, #283583 100%);
+  font-size: large;
+  padding-bottom: 3%;
+  }
 
-a {
-  color: #00B7FF;
-}
+  .footerlinks .column{
+  display:flex;
+  flex-direction: column;
+  gap:5px;
+  }
+
+  a{
+  text-decoration: none;
+  color: white;
+  padding: 10px;
+  }
+
+  .bold{
+  font-weight: bold;
+  }
+
+  main{
+  background-image: url("/KainosBranding/bg_kainos.png");
+  }
+
+  .buttonrow{
+  display: flex;
+  justify-content: center;
+  }
+  
+  /*.button-link{
+  
+  }*/
+
+  label{
+  color: white;
+  }
+
+  h1, h2, th, td{
+  color: white;
+  }
+
+  .formContainer{
+  padding-left: 10%;
+  padding-bottom: 80px;
+  }
+
+

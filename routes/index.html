@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Document</title>
+ <link rel="stylesheet" href="/public/stylesheets/style.css">
+ <script src="index.ejs" defer></script>
+</head>
+
+<body>
+ <header class="headercontainer">
+    <div class="logo">
+     <img src="/KainosBranding/KainosLogo.png" alt="" class="logoimage">
+     </div>
+    <div class="title">STAFF DIRECTORY</div>
+ </header>
+ <hr>
+ <main>
+    <div class="buttonrow">
+        <a href="https://www.example.com" class="button-link"><button>View Employees</button></a>
+        <a href="https://www.example2.com" class="button-link"><button>Edit Employees</button></a>
+        <a href="https://www.example3.com" class="button-link"><button>Create New Employee</button></a>
+        <a href="https://www.example4.com" class="button-link"><button>Delete Employee</button></a>
+    </div>
+
+     <div class="formContainer">
+    <h1>Add New Employee</h1>
+
+     <form id="employeeForm">
+       <label for="employeeNumber">Employee Number:</label><br>
+    <input type="text" id="employeeNumber" name="employeeNumber"><br>
+
+    <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name"><br>
+
+                <label for="address">Address:</label><br>
+                <input type="text" id="address" name="address"><br>
+
+                <label for="salary">Salary:</label><br>
+                <input type="number" id="salary" name="salary"><br>
+
+                <label for="role">Role:</label><br>
+                <input type="text" id="role" name="role"><br>
+
+                <input type="button" id="addEmployeeButton" value="Add Employee">
+        </form>
+
+            <h2>Employee List</h2>
+            <table id="employeeTable" border="1">
+            <thead>
+                <tr>
+                    <th>Employee Number</th>
+                    <th>Name</th>
+                    <th>Address</th>
+                    <th>Salary</th>
+                    <th>Role</th>
+                 </tr>
+        </thead>
+            <tbody>
+                <!-- Employee rows will be dynamically added here -->
+                 </tbody>
+        </table>
+
+         <script>
+// JavaScript to handle adding employees and updating the table
+document.getElementById('addEmployeeButton').addEventListener('click', () => {
+ // Get form values
+const employeeNumber = document.getElementById('employeeNumber').value;
+const name = document.getElementById('name').value;
+const address = document.getElementById('address').value;
+const salary = document.getElementById('salary').value;
+const role = document.getElementById('role').value;
+
+// Validate inputs (simple validation)
+if (!employeeNumber || !name || !address || !salary || !role) {
+alert('Please fill in all fields');
+return;
+}
+
+// Create a new table row
+const table = document.getElementById('employeeTable').querySelector('tbody');
+const newRow = document.createElement('tr');
+
+newRow.innerHTML = `
+<td>${employeeNumber}</td>
+<td>${name}</td>
+<td>${address}</td>
+<td>${salary}</td>
+<td>${role}</td>
+`;
+
+// Add the row to the table
+table.appendChild(newRow);
+
+// Clear the form inputs
+document.getElementById('employeeForm').reset();
+});
+</script>
+
+ </div>
+
+
+
+</main>
+<footer>
+<div class="footerlinks">
+<div class="column">
+<a href="" class="bold">Navigation</a>
+ <a href="">Digital Services</a>
+<a href="">Workday</a>
+<a href="">Industries</a>
+<a href="">Insights</a>
+<a href="">Careers</a>
+
+</div>
+<div class="column">
+<a href="" class="bold">About</a>
+<a href="">About us</a>
+<a href="">Our culture</a>
+<a href="">Our approach</a>
+<a href="">Diversity and Inclusion</a>
+<a href="">Sustainability</a>
+</div>
+<div class="column">
+<a href="" class="bold">Investor Relations</a>
+<a href="">Investor relations home</a>
+<a href="">Investor tools</a>
+<a href="">Results and presentations</a>
+<a href="">Regulatory news and events</a>
+<a href="">People and policies</a>
+</div>
+<div class="column">
+ <a href="" class="bold">Legal</a>
+ <a href="">Privacy notice</a>
+ <a href="">Corporate information</a>
+<a href="">Modern slavery statement</a>
+<a href="">Recruitment notice</a>
+</div>
+
+ </div>
+ </footer>
+
+
+</body>
+
+</html>
